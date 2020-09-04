@@ -1,0 +1,9 @@
+title: IOB-I2C-MAX731x
+project: IOB-I2C-MAX731x
+designer: John Plocher
+fabricated: no
+fab_date: 2020-09
+image_path: IOB-I2C-MAX731x-Graphic.png
+status: released
+release: yes
+tags: [SPCoast, eagle, I2C]
