@@ -1,4 +1,10 @@
+# IOB-I2C-MAX731x
+## License: CERN Open Hardware Licence v1.2
 ### Introduction
+
+IOB I2C MAX7311/7318 based IO Expander
+
+The MAX 731x series costs twice that of the MCP23017/PCA9555 expanders; for that price one gets support for  up to 64x devices on a single I2C chain.
 
 This board was originally produced to help me build control panels for
 my model railroad - I needed to connect many different buttons, switches
@@ -48,8 +54,9 @@ independent supply.
 
 ### Specifications
 
-This IO board is based on the MAX7311/12 16 bit IO Expander, with a a
-bank of 4x I/O Boards. These IOBs contain buffered LED drivers connected
+This IO board is based on the MAX7311/18 16 bit IO Expander, mounted on a
+[IOB Baseboard](/pages/IOB-Baseboard "wikilink") that presents a
+bank of 4x I/O personality boards (IOBs). The Baseboard contains buffered LED drivers connected
 to LEDs that show the status of the I/O lines in real time. They also
 contain the needed circuitry to drive / sense the appliances connected
 to them. See
@@ -57,19 +64,20 @@ to them. See
 -   [IOB-Inputs](/pages/IOB-Inputs "wikilink") 4x buffered inputs
 -   [IOB-Outputs](/pages/IOB-Outputs "wikilink") 4x buffered outputs
 -   [IOB-Turtle](/pages/IOB-Turtle "wikilink") 1x buffered output and 3x buffered inputs
--   [IOB-Signal](/pages/IOB-Signal "wikilink") 2x RGB signal head driver (Dark, Stop, Approach, Clear)
+-   [IOB-Generic](/pages/IOB-Generic "wikilink") 4x unbuffered I/O lines with optional inline resistors
+
 
 Each board provides a latched set of 16x IO points, with each point
 being software selectable to be either an input or an output. The
 individual points are reasonably protected from the environment, and can
-sink 10 mA each (with the MAX7312, they can also drive \~20mA). By using
-active low inputs and outputs, the effects of environmental noise are
+sink 10 mA each (they are NOT current sources!)
+By using active low inputs and outputs, the effects of environmental noise are
 reduced - remote sensors only need to ground an I/O point to register
 activity.
 
-#### Communication Protocol {#communication_protocol}
+### Communication Protocol
 
-``` {.cpp}
+```C++
 Simple I2C 16-bit Reads and Writes:
 uint16_t I2Cexpander::read7311() {
     uint16_t data = 0;
@@ -102,7 +110,8 @@ See [I2Cexpander-lib](/pages/I2Cexpander "wikilink") for a more complete interfa
 library.
 
 
-#### Addressing
+### Addressing
+The address selection for the MAX731x is complex, as it uses 3x address pins, but adds SDA and SCL to the traditional "Vcc and Gnd" used elsewhere.
 
 **AD2**|**AD1**|**AD0**|**A6**|**A5**|**A4**|**A3**|**A2**|**A1**|**A0**|**ADDRESS (HEX)**
 :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
@@ -170,5 +179,6 @@ SDA|GND|SCL|1|1|0|1|1|0|0|0xD8
 SDA|GND|SDA|1|1|0|1|1|0|1|0xDA
 SDA|V+|SCL|1|1|0|1|1|1|0|0xDC
 SDA|V+|SDA|1|1|0|1|1|1|1|0xDE
+
 
 
