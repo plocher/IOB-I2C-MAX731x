@@ -883,11 +883,11 @@ design rules under a new name.
 <element name="SW2X13" library="SPCoast" package="EDG-04" value="A1" x="53.975" y="74.93" rot="R180"/>
 <element name="SW3X13" library="SPCoast" package="EDG-04" value="A2" x="34.925" y="74.93" rot="R180"/>
 <element name="U$1X13" library="SPCoast" package="OSHW-LOGO-L" value="DOC-OSHW-LOGO-L" x="19.685" y="75.057"/>
-<element name="FID-LR" library="SPCoast" package="FIDUCIAL_1MM" value="" x="93.98" y="8.89"/>
-<element name="FID-UL" library="SPCoast" package="FIDUCIAL_1MM" value="" x="5.08" y="91.44" smashed="yes">
+<element name="FID-LR" library="SPCoast" package="FIDUCIAL_1MM" value="FIDUCIAL" x="93.98" y="8.89"/>
+<element name="FID-UL" library="SPCoast" package="FIDUCIAL_1MM" value="FIDUCIAL" x="5.08" y="91.44" smashed="yes">
 <attribute name="NAME" x="8.255" y="88.9" size="1.016" layer="25" rot="R180"/>
 </element>
-<element name="U$5X1" library="SPCoast" package="BOARD-TEMPLATE-IOB-I2C-3X1-ARRAY" value="" x="0" y="0"/>
+<element name="U$5X1" library="SPCoast" package="BOARD-TEMPLATE-IOB-I2C-3X1-ARRAY" value="10x10" x="0" y="0"/>
 </elements>
 <signals>
 <signal name="!INTX11">
