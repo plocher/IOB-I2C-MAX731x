@@ -29,7 +29,7 @@
 <layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
 <layer number="21" name="tPlace" color="19" fill="1" visible="no" active="no"/>
-<layer number="22" name="bPlace" color="22" fill="1" visible="no" active="no"/>
+<layer number="22" name="bPlace" color="17" fill="1" visible="no" active="no"/>
 <layer number="23" name="tOrigins" color="30" fill="1" visible="no" active="no"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
 <layer number="25" name="tNames" color="63" fill="1" visible="no" active="no"/>
@@ -55,10 +55,10 @@
 <layer number="45" name="Holes" color="35" fill="1" visible="no" active="no"/>
 <layer number="46" name="Milling" color="35" fill="1" visible="no" active="no"/>
 <layer number="47" name="Measures" color="21" fill="1" visible="no" active="no"/>
-<layer number="48" name="Document" color="57" fill="1" visible="no" active="no"/>
+<layer number="48" name="Document" color="47" fill="1" visible="no" active="no"/>
 <layer number="49" name="Reference" color="48" fill="1" visible="no" active="no"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="49" fill="1" visible="no" active="no"/>
+<layer number="51" name="tDocu" color="24" fill="1" visible="no" active="no"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
@@ -377,23 +377,23 @@ Standard 8.5x11 US Letter frame</description>
 <rectangle x1="0.8" y1="-0.6238" x2="0.9" y2="-0.4738" layer="49" rot="R180"/>
 </package>
 <package name="0603-RES">
-<wire x1="-1.473" y1="0.6528" x2="1.473" y2="0.6528" width="0.0508" layer="39"/>
-<wire x1="1.473" y1="0.6528" x2="1.473" y2="-0.6528" width="0.0508" layer="39"/>
-<wire x1="1.473" y1="-0.6528" x2="-1.473" y2="-0.6528" width="0.0508" layer="39"/>
-<wire x1="-1.473" y1="-0.6528" x2="-1.473" y2="0.6528" width="0.0508" layer="39"/>
+<wire x1="-1.473" y1="0.508" x2="1.473" y2="0.508" width="0.0508" layer="39"/>
+<wire x1="1.473" y1="0.508" x2="1.473" y2="-0.508" width="0.0508" layer="39"/>
+<wire x1="1.473" y1="-0.508" x2="-1.473" y2="-0.508" width="0.0508" layer="39"/>
+<wire x1="-1.473" y1="-0.508" x2="-1.473" y2="0.508" width="0.0508" layer="39"/>
 <wire x1="-0.356" y1="0.432" x2="0.356" y2="0.432" width="0.1016" layer="49"/>
 <wire x1="-0.356" y1="-0.419" x2="0.356" y2="-0.419" width="0.1016" layer="49"/>
-<smd name="1" x="-0.85" y="0" dx="1.1" dy="1" layer="1"/>
-<smd name="2" x="0.85" y="0" dx="1.1" dy="1" layer="1"/>
+<smd name="1" x="-0.889" y="0" dx="0.8128" dy="0.8128" layer="1"/>
+<smd name="2" x="0.889" y="0" dx="0.8128" dy="0.8128" layer="1"/>
 <text x="-1.27" y="1.27" size="0.8128" layer="25" font="vector">&gt;NAME</text>
 <text x="-1.27" y="-1.905" size="0.8128" layer="27" font="vector">&gt;VALUE</text>
 <rectangle x1="-0.8382" y1="-0.4699" x2="-0.3381" y2="0.4801" layer="49"/>
 <rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="49"/>
 <rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
-<wire x1="1.524" y1="0.635" x2="-1.524" y2="0.635" width="0.127" layer="21"/>
-<wire x1="-1.524" y1="0.635" x2="-1.524" y2="-0.635" width="0.127" layer="21"/>
-<wire x1="-1.524" y1="-0.635" x2="1.524" y2="-0.635" width="0.127" layer="21"/>
-<wire x1="1.524" y1="-0.635" x2="1.524" y2="0.635" width="0.127" layer="21"/>
+<wire x1="1.4478" y1="0.508" x2="-1.4478" y2="0.508" width="0.127" layer="21"/>
+<wire x1="-1.4478" y1="0.508" x2="-1.4478" y2="-0.508" width="0.127" layer="21"/>
+<wire x1="-1.4478" y1="-0.508" x2="1.4478" y2="-0.508" width="0.127" layer="21"/>
+<wire x1="1.4478" y1="-0.508" x2="1.4478" y2="0.508" width="0.127" layer="21"/>
 <wire x1="-0.1143" y1="0" x2="0.1143" y2="0.002540625" width="0.254" layer="21"/>
 </package>
 <package name="1/6W-RES">
@@ -5564,18 +5564,18 @@ http://freedomdefined.org/OSHW   Creative Commons - Attribution - ShareAlike 3.0
 </classes>
 <parts>
 <part name="FRAME1" library="MCP" deviceset="FRAME-LETTER" device=""/>
-<part name="U$1" library="SPCoast" deviceset="DOC-OSHW-LOGO-" device="L" value="DOC-OSHW-LOGO-L"/>
+<part name="U$1" library="SPCoast" deviceset="DOC-OSHW-LOGO-" device="L" value="OSHW"/>
 <part name="V7" library="supply2" deviceset="GND" device=""/>
 <part name="P+6" library="supply1" deviceset="VCC" device=""/>
-<part name="R17" library="SPCoast" deviceset="R*" device="0805-RES" value="4k7"/>
+<part name="R17" library="SPCoast" deviceset="R*" device="0603-RES" value="4k7"/>
 <part name="LED16" library="SPCoast" deviceset="LED*" device="0603-LED" value="G"/>
 <part name="P+14" library="supply1" deviceset="VCC" device=""/>
 <part name="P+3" library="supply1" deviceset="VCC" device=""/>
 <part name="V9" library="supply2" deviceset="GND" device=""/>
 <part name="IC1" library="SPCoast" deviceset="MAX73XX" device="/AUG" value="MAX7311"/>
-<part name="SW1" library="SPCoast" deviceset="SW_DIP-4" device="" value="A0"/>
-<part name="SW2" library="SPCoast" deviceset="SW_DIP-4" device="" value="A1"/>
-<part name="SW3" library="SPCoast" deviceset="SW_DIP-4" device="" value="A2"/>
+<part name="SW1" library="SPCoast" deviceset="SW_DIP-4" device="" value="SPSTx4"/>
+<part name="SW2" library="SPCoast" deviceset="SW_DIP-4" device="" value="SPSTx4"/>
+<part name="SW3" library="SPCoast" deviceset="SW_DIP-4" device="" value="SPSTx4"/>
 <part name="V5" library="supply2" deviceset="GND" device=""/>
 <part name="V6" library="supply2" deviceset="GND" device=""/>
 <part name="V10" library="supply2" deviceset="GND" device=""/>
